@@ -1,8 +1,26 @@
 <!--index.wxml-->
-<swiper style="height:400rpx" indicator-dots=true autoplay=true interval=2000 duration=500 circular=true>
-  <block wx:for="{{imgUrls}}">
-    <swiper-item>
-      <image src="{{item}}" class="slide-image" width="355" height="150"/>
-    </swiper-item>
-  </block>
-</swiper>
+<view>
+  <!-- 搜索组件 -->
+  <view id='inputText'>
+    <icon type="search" size="15" />
+    <input id="searchText" placeholder="输入关键字" />
+  </view>
+  <view>
+    <!-- 轮播组件 -->
+    <swiper indicator-dots="{{indicatorDots}}" autoplay="{{autoplay}}" interval="{{interval}}" duration="{{duration}}">
+      <block wx:for="{{imgUrls}}">
+        <swiper-item>
+          <image src="{{item}}" class="slide-image" mode='scaleToFill' />
+        </swiper-item>
+      </block>
+    </swiper>
+   <view>
+    姓名:{{name}},年龄:{{age}}
+   </view>
+    <!-- 图片Feed流组件 -->
+    <view wx:for="{{feedImgUrls}}" class='feedImage' bindtap='reqService'>
+      <image src="{{feedImgUrls[2*index]}}" class='feedItemImage' />
+      <image src="{{feedImgUrls[2*index+1]}}" class='feedItemImage' />
+    </view>
+  </view>
+</view>

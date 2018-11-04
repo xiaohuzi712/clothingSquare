@@ -1,21 +1,34 @@
 /**index.wxss**/
-.userinfo {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
+#inputText{
+  height: 20px;
+  padding: 4px;
+  margin: 5px;
+  border:1px solid #888;
+  border-radius: 5px;
 }
-
-.userinfo-avatar {
-  width: 128rpx;
-  height: 128rpx;
-  margin: 20rpx;
-  border-radius: 50%;
+#inputText icon{
+  float: left;
+  padding: 5px; 
 }
-
-.userinfo-nickname {
-  color: #aaa;
+#searchText{
+  font-size: 9pt;
+  float: left;
+  padding-left: 5px;
 }
-
-.usermotto {
-  margin-top: 200px;
+.slide-image{
+padding-top: 10px;
+width: 380px;
+height: 300px;
+}
+.feedImage{
+  margin-top:10px; 
+}
+.feedItemImage{
+  float: left;
+  overflow: hidden;
+  width: 175px;
+  height: 240px;
+  margin-top: 8px;
+  margin-left:8px; 
+  border-radius: 5px;
 }
